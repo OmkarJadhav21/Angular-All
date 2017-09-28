@@ -1,0 +1,11 @@
+<div class="comtainer ">
+  <ng-content></ng-content>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" placeholder="localrer" #myref >
+    <input type="button" value="Wrong Way" (click)="nm=myref.value"> {{nm}}
+    <input type="button" value="Right WAy"(click)="withFun()"> {{xy}}
+    <input type="button" value="Content" (click)="cntChild()">{{ch}}
+  </div>
+</div>
+</div>

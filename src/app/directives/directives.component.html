@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" class="btn btn-danger"value="Change Type" (click)="TypeChng()">
+      <div class="center">
+      <div *ngIf="x">
+      {{type2}}
+    </div>
+    <div *ngIf="!x">
+      {{type}}
+    </div>
+  </div>
+    </div>
+  </div>
+
+<div class="row" *ngIf="!x">
+  <div class="col-md-12">
+      <div>
+          * ngFor
+      </div>
+    <div *ngFor="let amuk of tamuk">{{amuk}}</div>
+    <div class="col-md-12">
+        <div>
+        * ngSwitch
+        </div>
+
+      <div [ngSwitch]="mydata">
+        <div *ngSwitchCase="'are'">Are</div>
+        <div *ngSwitchCase="'You'">You</div>
+        <div *ngSwitchCase="'Ok'">Ok</div>
+        <input type="button" value="R" (click)="mydata='are'">
+        <input type="button" value="R" (click)="mydata='You'">
+      </div>
+      <input type="button" value="R" (click)="mydata='Ok'">
+    </div>
+  </div>  
+</div>
+
+<div class="row" *ngIf="x">
+  <div class="col-md-12">
+    <div [ngClass]="{'well': false,'bg-danger':true}" >
+        ngClass
+    </div>
+    <div [ngStyle]="etxt">
+        ngStyle
+    </div>
+
+    <div appMyDir>
+      Custom Directive-this is Right method
+    </div>
+
+    <div appMyDir>
+      Custom Directive-this is Right method
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12" *appCustStrDir="e">
+    its cust struc Directive
+  </div>
+</div>
+<input type="button" class="btn btn-info" value="Okay Two" (click)="e = !e" />

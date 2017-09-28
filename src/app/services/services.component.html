@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form_main">
+          <h4 class="heading"><strong>Quick </strong> Contact <span></span></h4>
+          <div class="form">
+             <form > 
+              <input 
+                type="text" 
+                placeholder="User Name" 
+                class="txt"
+                #name
+              >
+  
+          
+              <input 
+                type="text" 
+                placeholder="Password" 
+                class="txt"
+                #pass
+       >
+  
+              <input 
+                type="button" 
+                value="Submit" 
+               (click)="onSubmit(name.value,pass.value)"
+                class="btn btn-info"
+             >
+            </form>
+          </div>
+        </div>
+      </div> 
+    </div>

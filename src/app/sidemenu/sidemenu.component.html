@@ -1,0 +1,20 @@
+
+<div class="row">
+  <div class="col-md-12 header">
+      <button class="glyphicon glyphicon-align-left btn btn-primary btnn" (click)="toggleSidebar()"></button>
+        <div> <h1>Angular</h1></div>
+  </div>
+  </div>
+
+  <div id="sidebar">
+    <ul style="color:orange">
+         {{User}}
+        <li (click)="compo('1')" > Component</li>
+        <li (click)="compo('2')">Directive</li>
+        <li (click)="compo('3')">Content Projection</li>
+        <li (click)="compo('4')">Services & Http</li>
+    </ul>
+     </div>
+ 
+  
+

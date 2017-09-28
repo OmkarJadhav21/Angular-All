@@ -1,0 +1,11 @@
+<div class="container center" >
+<div class="row">
+  <div class="col-md-12">
+    Component 
+    <input type="text" [(ngModel)]="txt">{{txt}}
+  
+  </div>
+</div>
+<app-send (em)="imgNm=$event"> </app-send>
+<app-receive [rcv]="imgNm"></app-receive>
+</div>
