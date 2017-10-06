@@ -1,7 +1,15 @@
-<h3><b>Pipes</b> are used for the data representation.</h3>Types-1)Date Pipes 2)Currency 3)Slice
- 
+      <h3><b>Pipes</b> are used for the data representation.</h3>Types-1)Date Pipes 2)Currency 3)Slice
+      <hr>
+
 <div class="row">
   <div class="col-md-12">
+    {{date | date:"dd-MM-yyyy"      // "MM-dd-yyyy"}} <===Date Pipes<br>
 
+    <h3><span class="badge badge-primary">
+    {{ money | currency:"INR" }}
+    </span></h3><<===currency pipes<br>
+    
+    {{mystr | slice:1:3}}<<====it slices "Omkar" from 1 to 3 and gives middle letters<br>
+    {{mystr |uppercase}}
   </div>
 </div>
