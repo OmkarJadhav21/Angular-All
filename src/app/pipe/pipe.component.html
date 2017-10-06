@@ -14,3 +14,18 @@
     {{sys |asciiPipe:3}}
   </div>
 </div>
+<div class="row">
+    <div class="col-md-12">
+      <input type="text" placeholder="New Mobile" #newMob>
+      <input type="button" value="Add Mobile" class="btn btn-primary"(click)="AddNewMob(newMob.value)"><br>
+      <input type="text" [(ngModel)]="myFilt"placeholder="Filter Search">
+    </div>
+  </div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let mob of Mobiles |filterPipe:myFilt">{{mob}}
+      </li>
+    </ul>
+  </div>
+</div>

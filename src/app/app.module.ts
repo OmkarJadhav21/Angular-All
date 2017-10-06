@@ -20,6 +20,7 @@ import { HttpModule} from '@angular/http'
 import { LoginService } from './login.service';
 import { PipeComponent } from './pipe/pipe.component';
 import { AsciiPipePipe } from './pipe/ascii-pipe.pipe';
+import { FilterPipePipe } from './pipe/filter-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { AsciiPipePipe } from './pipe/ascii-pipe.pipe';
     ServicesComponent,
     LogedinComponent,
     PipeComponent,
-    AsciiPipePipe
+    AsciiPipePipe,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,
