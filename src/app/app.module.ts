@@ -18,6 +18,8 @@ import{ DataserviceService } from './dataservice.service';
 import { LogedinComponent } from './services/logedin/logedin.component'
 import { HttpModule} from '@angular/http'
 import { LoginService } from './login.service';
+import { PipeComponent } from './pipe/pipe.component';
+import { AsciiPipePipe } from './pipe/ascii-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { LoginService } from './login.service';
     ContentProjectionComponent,
     WrongWayComponent,
     ServicesComponent,
-    LogedinComponent
+    LogedinComponent,
+    PipeComponent,
+    AsciiPipePipe
   ],
   imports: [
     BrowserModule,

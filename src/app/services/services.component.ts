@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 
@@ -8,12 +9,27 @@ import { DataserviceService } from '../dataservice.service';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor( private ser:DataserviceService) { }
+  constructor( private ser:DataserviceService,
+              private router:Router) { }
 
   ngOnInit() {
   }
+  // onSubmit(name,pass){
+  //   this.ser.onLogin(name,pass)}
+  
   onSubmit(name,pass){
-    this.ser.onLogin(name,pass);
+    this.ser.onLogin(name,pass).subscribe(
+      data=>{
+        if(data['Login']=="Success"){
+          console.log("Login Success")
+          this.router.navigate(['logedin'])
+        }else{
+          console.log("Login Fail  !!!")
+          this.router.navigate(['Service'])}
+      
+        
+      }
+    )
 
   }
 }

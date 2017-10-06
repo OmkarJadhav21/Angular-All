@@ -30,7 +30,10 @@ export class SidemenuComponent implements OnInit {
       document.getElementById("sidebar").classList.toggle('active');
       break;
 
-      case "4" :this.myRoute.navigate(['Service'])
+      case "4" :this.myRoute.navigate(['Pipes'])
+      document.getElementById("sidebar").classList.toggle('active');
+      break;
+      case "5" :this.myRoute.navigate(['Service'])
       document.getElementById("sidebar").classList.toggle('active');
       break;
       
