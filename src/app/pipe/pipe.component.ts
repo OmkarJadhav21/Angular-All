@@ -9,6 +9,7 @@ export class PipeComponent implements OnInit {
 private date:String
 private money=500
 private mystr="Omkar"
+private sys="Macintosh"
   constructor() { }
 
   ngOnInit() {
